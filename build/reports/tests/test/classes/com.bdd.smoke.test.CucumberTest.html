@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.bdd.smoke.test.CucumberTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.bdd.smoke.test.CucumberTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.bdd.smoke.test.html">com.bdd.smoke.test</a> &gt; CucumberTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">0</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">-</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">-</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Feature: Dummy Rest API - Smoke Tests
+
+  @SmokeTest @Get1User @Success
+  Scenario Outline: Success Scenario - Integration Test for GET End point     ?[90m# UserAPI.feature:7?[0m
+    ?[36mGiven ?[0m?[36mRest API is up and running?[0m
+    ?[36mWhen ?[0m?[36mI submit a request to Get a single employee data &quot;&lt;Employee number&gt;&quot;?[0m
+    ?[36mThen ?[0m?[36mvalidate &quot;&lt;Response Code&gt;&quot;?[0m
+
+    # And validate response body
+    Examples: 
+Request method:	GET
+Request path:	http://dummy.restapiexample.com/api/v1/employee/100
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Headers:		Accept=*/*
+Cookies:		&lt;none&gt;
+Body:			&lt;none&gt;
+
+  @Get1User @Success @SmokeTest
+  Scenario Outline: Success Scenario - Integration Test for GET End point ?[90m# UserAPI.feature:14?[0m
+    ?[32mGiven ?[0m?[32mRest API is up and running?[0m                                      ?[90m# StepDefinition.restAPIIsUpAndRunning()?[0m
+    ?[32mWhen ?[0m?[32mI submit a request to Get a single employee data &quot;?[0m?[32m?[1m100?[0m?[32m&quot;?[0m           ?[90m# StepDefinition.iSubmitARequestToGetASingleEmployeeData(String)?[0m
+    ?[32mThen ?[0m?[32mvalidate &quot;?[0m?[32m?[1m200?[0m?[32m&quot;?[0m                                                   ?[90m# StepDefinition.validate(String)?[0m
+
+  @SmokeTest @Get1User @Error
+  Scenario Outline: Error Scenario 404 - Integration Test for GET End point         ?[90m# UserAPI.feature:19?[0m
+    ?[36mGiven ?[0m?[36mRest API is up and running?[0m
+    ?[36mWhen ?[0m?[36mI submit a error request to Get a single employee data &quot;&lt;Employee number&gt;&quot;?[0m
+    ?[36mThen ?[0m?[36mvalidate &quot;&lt;Response Code&gt;&quot;?[0m
+
+    # And validate response body
+    Examples: 
+Request method:	GET
+Request path:	http://dummy.restapiexample.com/api/v1/employee/
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Headers:		Accept=*/*
+Cookies:		&lt;none&gt;
+Body:			&lt;none&gt;
+
+  @Error @Get1User @SmokeTest
+  Scenario Outline: Error Scenario 404 - Integration Test for GET End point ?[90m# UserAPI.feature:26?[0m
+    ?[32mGiven ?[0m?[32mRest API is up and running?[0m                                        ?[90m# StepDefinition.restAPIIsUpAndRunning()?[0m
+    ?[32mWhen ?[0m?[32mI submit a error request to Get a single employee data &quot;?[0m?[32m?[1m1?[0m?[32m&quot;?[0m         ?[90m# StepDefinition.iSubmitAErrorRequestToGetASingleEmployeeData(String)?[0m
+    ?[32mThen ?[0m?[32mvalidate &quot;?[0m?[32m?[1m404?[0m?[32m&quot;?[0m                                                     ?[90m# StepDefinition.validate(String)?[0m
+
+  @SmokeTest @Get1User @Error
+  Scenario Outline: Error Scenario 400 - Integration Test for GET End point       ?[90m# UserAPI.feature:31?[0m
+    ?[36mGiven ?[0m?[36mRest API is up and running?[0m
+    ?[36mWhen ?[0m?[36mI submit a bad request to Get a single employee data &quot;&lt;Employee number&gt;&quot;?[0m
+    ?[36mThen ?[0m?[36mvalidate &quot;&lt;Response Code&gt;&quot;?[0m
+
+    # And validate response body
+    Examples: 
+Request method:	GET
+Request path:	https://dummy.restapiexample.com/v1/employee/1
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Headers:		Accept=*/*
+Cookies:		&lt;none&gt;
+Body:			&lt;none&gt;
+
+  @Error @Get1User @SmokeTest
+  Scenario Outline: Error Scenario 400 - Integration Test for GET End point ?[90m# UserAPI.feature:38?[0m
+    ?[32mGiven ?[0m?[32mRest API is up and running?[0m                                        ?[90m# StepDefinition.restAPIIsUpAndRunning()?[0m
+    ?[32mWhen ?[0m?[32mI submit a bad request to Get a single employee data &quot;?[0m?[32m?[1m1?[0m?[32m&quot;?[0m           ?[90m# StepDefinition.iSubmitABadRequestToGetASingleEmployeeData(String)?[0m
+    ?[31mThen ?[0m?[31mvalidate &quot;?[0m?[31m?[1m429?[0m?[31m&quot;?[0m                                                     ?[90m# StepDefinition.validate(String)?[0m
+      ?[31morg.junit.ComparisonFailure: expected:&lt;4[29]&gt; but was:&lt;4[04]&gt;
+      	at org.junit.Assert.assertEquals(Assert.java:115)
+      	at org.junit.Assert.assertEquals(Assert.java:144)
+      	at com.bdd.smoke.test.steps.StepDefinition.validate(StepDefinition.java:76)
+      	at ?.Then validate &quot;429&quot;(UserAPI.feature:34)
+      ?[0m
+
+  @SmokeTest @Delete @Success
+  Scenario Outline: Success Scenario - Integration Test for DELETE End point ?[90m# UserAPI.feature:43?[0m
+    ?[36mGiven ?[0m?[36mRest API is up and running?[0m
+    ?[36mWhen ?[0m?[36mI submit a request to delete a &quot;&lt;user&gt;&quot;?[0m
+    ?[36mThen ?[0m?[36mvalidate &quot;&lt;Response Code&gt;&quot;?[0m
+
+    Examples: 
+Request method:	DELETE
+Request path:	http://dummy.restapiexample.com/api/v1/delete/719
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Headers:		Accept=application/json
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Body:			&lt;none&gt;
+
+  @Delete @Success @SmokeTest
+  Scenario Outline: Success Scenario - Integration Test for DELETE End point ?[90m# UserAPI.feature:49?[0m
+    ?[32mGiven ?[0m?[32mRest API is up and running?[0m                                         ?[90m# StepDefinition.restAPIIsUpAndRunning()?[0m
+    ?[32mWhen ?[0m?[32mI submit a request to delete a &quot;?[0m?[32m?[1m719?[0m?[32m&quot;?[0m                                ?[90m# StepDefinition.iSubmitARequestToDeleteA(String)?[0m
+    ?[32mThen ?[0m?[32mvalidate &quot;?[0m?[32m?[1m200?[0m?[32m&quot;?[0m                                                      ?[90m# StepDefinition.validate(String)?[0m
+
+  @SmokeTest @delete @Error
+  Scenario Outline: Error Scenario - Integration Test for DELETE End point ?[90m# UserAPI.feature:54?[0m
+    ?[36mGiven ?[0m?[36mRest API is up and running?[0m
+    ?[36mWhen ?[0m?[36mI submit a request to delete a &quot;&lt;user&gt;&quot;?[0m
+    ?[36mThen ?[0m?[36mvalidate &quot;&lt;Response Code&gt;&quot;?[0m
+
+    Examples: 
+Request method:	DELETE
+Request path:	http://dummy.restapiexample.com/api/v1/delete/719
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Headers:		Accept=application/json
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Body:			&lt;none&gt;
+
+  @Error @SmokeTest @delete
+  Scenario Outline: Error Scenario - Integration Test for DELETE End point ?[90m# UserAPI.feature:60?[0m
+    ?[32mGiven ?[0m?[32mRest API is up and running?[0m                                       ?[90m# StepDefinition.restAPIIsUpAndRunning()?[0m
+    ?[32mWhen ?[0m?[32mI submit a request to delete a &quot;?[0m?[32m?[1m719?[0m?[32m&quot;?[0m                              ?[90m# StepDefinition.iSubmitARequestToDeleteA(String)?[0m
+    ?[32mThen ?[0m?[32mvalidate &quot;?[0m?[32m?[1m429?[0m?[32m&quot;?[0m                                                    ?[90m# StepDefinition.validate(String)?[0m
+
+  @SmokeTest @GetAllUser @Success
+  Scenario Outline: Success Scenario - Integration Test for GET End point ?[90m# UserAPI.feature:65?[0m
+    ?[36mGiven ?[0m?[36mRest API is up and running?[0m
+    ?[36mWhen ?[0m?[36mI submit a request to Get all employee data endpoint?[0m
+    ?[36mThen ?[0m?[36mvalidate &quot;&lt;Response Code&gt;&quot;?[0m
+
+    # And validate response body
+    Examples: 
+Request method:	GET
+Request path:	http://dummy.restapiexample.com/api/v1/employees
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Headers:		Accept=application/json
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Body:			&lt;none&gt;
+
+  @Success @GetAllUser @SmokeTest
+  Scenario Outline: Success Scenario - Integration Test for GET End point ?[90m# UserAPI.feature:72?[0m
+    ?[32mGiven ?[0m?[32mRest API is up and running?[0m                                      ?[90m# StepDefinition.restAPIIsUpAndRunning()?[0m
+    ?[32mWhen ?[0m?[32mI submit a request to Get all employee data endpoint?[0m             ?[90m# StepDefinition.iSubmitARequestToGetAllEmployeeDataEndpoint()?[0m
+    ?[31mThen ?[0m?[31mvalidate &quot;?[0m?[31m?[1m200?[0m?[31m&quot;?[0m                                                   ?[90m# StepDefinition.validate(String)?[0m
+      ?[31morg.junit.ComparisonFailure: expected:&lt;[200]&gt; but was:&lt;[429]&gt;
+      	at org.junit.Assert.assertEquals(Assert.java:115)
+      	at org.junit.Assert.assertEquals(Assert.java:144)
+      	at com.bdd.smoke.test.steps.StepDefinition.validate(StepDefinition.java:76)
+      	at ?.Then validate &quot;200&quot;(UserAPI.feature:68)
+      ?[0m
+
+  @SmokeTest @GetAllUser @Error
+  Scenario Outline: Error Scenario 429 - Integration Test for GET End point ?[90m# UserAPI.feature:77?[0m
+    ?[36mGiven ?[0m?[36mRest API is up and running?[0m
+    ?[36mWhen ?[0m?[36mI submit a error request to Get all employee data endpoint?[0m
+    ?[36mThen ?[0m?[36mvalidate &quot;&lt;Response Code&gt;&quot;?[0m
+
+    Examples: 
+Request method:	GET
+Request path:	http://dummy.restapiexample.com/api/v1/employees
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Headers:		Accept=application/json
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Body:			&lt;none&gt;
+
+  @Error @GetAllUser @SmokeTest
+  Scenario Outline: Error Scenario 429 - Integration Test for GET End point ?[90m# UserAPI.feature:83?[0m
+    ?[32mGiven ?[0m?[32mRest API is up and running?[0m                                        ?[90m# StepDefinition.restAPIIsUpAndRunning()?[0m
+    ?[32mWhen ?[0m?[32mI submit a error request to Get all employee data endpoint?[0m         ?[90m# StepDefinition.iSubmitAErrorRequestToGetAllEmployeeDataEndpoint()?[0m
+    ?[32mThen ?[0m?[32mvalidate &quot;?[0m?[32m?[1m429?[0m?[32m&quot;?[0m                                                     ?[90m# StepDefinition.validate(String)?[0m
+
+?[31mFailed scenarios:?[0m
+?[31mUserAPI.feature:38 ?[0m# Scenario Outline: Error Scenario 400 - Integration Test for GET End point
+?[31mUserAPI.feature:72 ?[0m# Scenario Outline: Success Scenario - Integration Test for GET End point
+
+7 Scenarios (?[31m2 failed?[0m, ?[32m5 passed?[0m)
+21 Steps (?[31m2 failed?[0m, ?[32m19 passed?[0m)
+0m14.503s
+
+org.junit.ComparisonFailure: expected:&lt;4[29]&gt; but was:&lt;4[04]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.bdd.smoke.test.steps.StepDefinition.validate(StepDefinition.java:76)
+	at ?.Then validate &quot;429&quot;(UserAPI.feature:34)
+
+org.junit.ComparisonFailure: expected:&lt;[200]&gt; but was:&lt;[429]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.bdd.smoke.test.steps.StepDefinition.validate(StepDefinition.java:76)
+	at ?.Then validate &quot;200&quot;(UserAPI.feature:68)
+
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 5.2.1</a> at 22 Mar, 2021 1:30:51 PM</p>
+</div>
+</div>
+</body>
+</html>

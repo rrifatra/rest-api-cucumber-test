@@ -1,0 +1,542 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 14,
+        "name": "Success Scenario - Integration Test for GET End point",
+        "description": "",
+        "id": "dummy-rest-api---smoke-tests;success-scenario---integration-test-for-get-end-point;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 492914000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Rest API is up and running",
+            "match": {
+              "location": "StepDefinition.restAPIIsUpAndRunning()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3014817300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I submit a request to Get a single employee data \"100\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "100",
+                  "offset": 50
+                }
+              ],
+              "location": "StepDefinition.iSubmitARequestToGetASingleEmployeeData(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1742000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "validate \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 10
+                }
+              ],
+              "location": "StepDefinition.validate(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 5,
+            "name": "@Get1User"
+          },
+          {
+            "line": 6,
+            "name": "@Success"
+          },
+          {
+            "line": 4,
+            "name": "@SmokeTest"
+          }
+        ]
+      },
+      {
+        "line": 26,
+        "name": "Error Scenario 404 - Integration Test for GET End point",
+        "description": "",
+        "id": "dummy-rest-api---smoke-tests;error-scenario-404---integration-test-for-get-end-point;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 20629300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Rest API is up and running",
+            "match": {
+              "location": "StepDefinition.restAPIIsUpAndRunning()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 832364600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I submit a error request to Get a single employee data \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 56
+                }
+              ],
+              "location": "StepDefinition.iSubmitAErrorRequestToGetASingleEmployeeData(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 171500,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "validate \"404\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 10
+                }
+              ],
+              "location": "StepDefinition.validate(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 18,
+            "name": "@Error"
+          },
+          {
+            "line": 17,
+            "name": "@Get1User"
+          },
+          {
+            "line": 16,
+            "name": "@SmokeTest"
+          }
+        ]
+      },
+      {
+        "line": 38,
+        "name": "Error Scenario 400 - Integration Test for GET End point",
+        "description": "",
+        "id": "dummy-rest-api---smoke-tests;error-scenario-400---integration-test-for-get-end-point;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7658400,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Rest API is up and running",
+            "match": {
+              "location": "StepDefinition.restAPIIsUpAndRunning()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2194893200,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I submit a bad request to Get a single employee data \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 54
+                }
+              ],
+              "location": "StepDefinition.iSubmitABadRequestToGetASingleEmployeeData(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 680800,
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c4[29]\u003e but was:\u003c4[04]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat com.bdd.smoke.test.steps.StepDefinition.validate(StepDefinition.java:76)\r\n\tat ✽.Then validate \"429\"(UserAPI.feature:34)\r\n",
+              "status": "failed"
+            },
+            "line": 34,
+            "name": "validate \"429\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "429",
+                  "offset": 10
+                }
+              ],
+              "location": "StepDefinition.validate(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 30,
+            "name": "@Error"
+          },
+          {
+            "line": 29,
+            "name": "@Get1User"
+          },
+          {
+            "line": 28,
+            "name": "@SmokeTest"
+          }
+        ]
+      },
+      {
+        "line": 49,
+        "name": "Success Scenario - Integration Test for DELETE End point",
+        "description": "",
+        "id": "dummy-rest-api---smoke-tests;success-scenario---integration-test-for-delete-end-point;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1684500,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "Rest API is up and running",
+            "match": {
+              "location": "StepDefinition.restAPIIsUpAndRunning()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 706897500,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "I submit a request to delete a \"719\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "719",
+                  "offset": 32
+                }
+              ],
+              "location": "StepDefinition.iSubmitARequestToDeleteA(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 77700,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "validate \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 10
+                }
+              ],
+              "location": "StepDefinition.validate(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 41,
+            "name": "@Delete"
+          },
+          {
+            "line": 42,
+            "name": "@Success"
+          },
+          {
+            "line": 40,
+            "name": "@SmokeTest"
+          }
+        ]
+      },
+      {
+        "line": 60,
+        "name": "Error Scenario - Integration Test for DELETE End point",
+        "description": "",
+        "id": "dummy-rest-api---smoke-tests;error-scenario---integration-test-for-delete-end-point;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3021000,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "Rest API is up and running",
+            "match": {
+              "location": "StepDefinition.restAPIIsUpAndRunning()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3095238600,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "I submit a request to delete a \"719\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "719",
+                  "offset": 32
+                }
+              ],
+              "location": "StepDefinition.iSubmitARequestToDeleteA(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 42900,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "validate \"429\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "429",
+                  "offset": 10
+                }
+              ],
+              "location": "StepDefinition.validate(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 53,
+            "name": "@Error"
+          },
+          {
+            "line": 51,
+            "name": "@SmokeTest"
+          },
+          {
+            "line": 52,
+            "name": "@delete"
+          }
+        ]
+      },
+      {
+        "line": 72,
+        "name": "Success Scenario - Integration Test for GET End point",
+        "description": "",
+        "id": "dummy-rest-api---smoke-tests;success-scenario---integration-test-for-get-end-point;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1324700,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "Rest API is up and running",
+            "match": {
+              "location": "StepDefinition.restAPIIsUpAndRunning()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 939499000,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "I submit a request to Get all employee data endpoint",
+            "match": {
+              "location": "StepDefinition.iSubmitARequestToGetAllEmployeeDataEndpoint()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 358600,
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[200]\u003e but was:\u003c[429]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat com.bdd.smoke.test.steps.StepDefinition.validate(StepDefinition.java:76)\r\n\tat ✽.Then validate \"200\"(UserAPI.feature:68)\r\n",
+              "status": "failed"
+            },
+            "line": 68,
+            "name": "validate \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 10
+                }
+              ],
+              "location": "StepDefinition.validate(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 64,
+            "name": "@Success"
+          },
+          {
+            "line": 63,
+            "name": "@GetAllUser"
+          },
+          {
+            "line": 62,
+            "name": "@SmokeTest"
+          }
+        ]
+      },
+      {
+        "line": 83,
+        "name": "Error Scenario 429 - Integration Test for GET End point",
+        "description": "",
+        "id": "dummy-rest-api---smoke-tests;error-scenario-429---integration-test-for-get-end-point;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4131600,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "Rest API is up and running",
+            "match": {
+              "location": "StepDefinition.restAPIIsUpAndRunning()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3184617900,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "I submit a error request to Get all employee data endpoint",
+            "match": {
+              "location": "StepDefinition.iSubmitAErrorRequestToGetAllEmployeeDataEndpoint()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 42400,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "validate \"429\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "429",
+                  "offset": 10
+                }
+              ],
+              "location": "StepDefinition.validate(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 76,
+            "name": "@Error"
+          },
+          {
+            "line": 75,
+            "name": "@GetAllUser"
+          },
+          {
+            "line": 74,
+            "name": "@SmokeTest"
+          }
+        ]
+      }
+    ],
+    "name": "Dummy Rest API - Smoke Tests",
+    "description": "",
+    "id": "dummy-rest-api---smoke-tests",
+    "keyword": "Feature",
+    "uri": "UserAPI.feature"
+  }
+]
