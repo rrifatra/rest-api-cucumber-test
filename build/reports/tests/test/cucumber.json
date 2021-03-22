@@ -1,0 +1,240 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 13,
+        "name": "Success Scenario - Integration Test for GET End point",
+        "description": "",
+        "id": "dummy-rest-api---smoke-tests;success-scenario---integration-test-for-get-end-point;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 460793598,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Rest API is up and running",
+            "match": {
+              "location": "StepDefinition.restAPIIsUpAndRunning()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1741218225,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I submit a request to Get a single employee data \"100\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "100",
+                  "offset": 50
+                }
+              ],
+              "location": "StepDefinition.iSubmitARequestToGetASingleEmployeeData(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2690609,
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[200]\u003e but was:\u003c[429]\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat com.bdd.smoke.test.steps.StepDefinition.validate(StepDefinition.java:82)\n\tat ✽.Then validate \"200\"(DummyAPI.feature:9)\n",
+              "status": "failed"
+            },
+            "line": 9,
+            "name": "validate \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 10
+                }
+              ],
+              "location": "StepDefinition.validate(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@GET1USER"
+          },
+          {
+            "line": 5,
+            "name": "@Success"
+          },
+          {
+            "line": 3,
+            "name": "@SmokeTest"
+          }
+        ]
+      },
+      {
+        "line": 48,
+        "name": "Success Scenario - Integration Test for DELETE End point",
+        "description": "",
+        "id": "dummy-rest-api---smoke-tests;success-scenario---integration-test-for-delete-end-point;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 45524227,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "Rest API is up and running",
+            "match": {
+              "location": "StepDefinition.restAPIIsUpAndRunning()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1202920725,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "I submit a request to delete a \"719\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "719",
+                  "offset": 32
+                }
+              ],
+              "location": "StepDefinition.iSubmitARequestToDeleteA(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 341604,
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[200]\u003e but was:\u003c[429]\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat com.bdd.smoke.test.steps.StepDefinition.validate(StepDefinition.java:82)\n\tat ✽.Then validate \"200\"(DummyAPI.feature:45)\n",
+              "status": "failed"
+            },
+            "line": 45,
+            "name": "validate \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 10
+                }
+              ],
+              "location": "StepDefinition.validate(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 40,
+            "name": "@DELETE"
+          },
+          {
+            "line": 41,
+            "name": "@Success"
+          },
+          {
+            "line": 39,
+            "name": "@SmokeTest"
+          }
+        ]
+      },
+      {
+        "line": 71,
+        "name": "Success Scenario - Integration Test for GET End point",
+        "description": "",
+        "id": "dummy-rest-api---smoke-tests;success-scenario---integration-test-for-get-end-point;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3825300,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "Rest API is up and running",
+            "match": {
+              "location": "StepDefinition.restAPIIsUpAndRunning()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 907348501,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "I submit a request to Get all employee data endpoint",
+            "match": {
+              "location": "StepDefinition.iSubmitARequestToGetAllEmployeeDataEndpoint()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 412906,
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[200]\u003e but was:\u003c[429]\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat com.bdd.smoke.test.steps.StepDefinition.validate(StepDefinition.java:82)\n\tat ✽.Then validate \"200\"(DummyAPI.feature:67)\n",
+              "status": "failed"
+            },
+            "line": 67,
+            "name": "validate \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 10
+                }
+              ],
+              "location": "StepDefinition.validate(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 63,
+            "name": "@Success"
+          },
+          {
+            "line": 62,
+            "name": "@GetAllUser"
+          },
+          {
+            "line": 61,
+            "name": "@SmokeTest"
+          }
+        ]
+      }
+    ],
+    "name": "Dummy Rest API - Smoke Tests",
+    "description": "",
+    "id": "dummy-rest-api---smoke-tests",
+    "keyword": "Feature",
+    "uri": "DummyAPI.feature"
+  }
+]

@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'com..bdd.smoke.test'
+description 'Smoke test'
+version '0.0.1'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    testCompile("info.cukes:cucumber-java:1.2.5")
+    testCompile("info.cukes:cucumber-junit:1.2.5")
+    testCompile("com.googlecode.json-simple:json-simple:1.1.1")
+    testCompile("com.jayway.restassured:rest-assured:2.9.0")
+    testCompile("com.jayway.restassured:json-schema-validator:2.8.0")
+    testCompile("junit:junit:4.12")
+    testCompile("org.assertj:assertj-core:3.12.1")
+    testCompile("com.google.code.gson:gson:2.8.5")
+    }
+
+task smokeTest(type: Test, dependsOn: test) {
+    include "CucumberTest.class"
+}

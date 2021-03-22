@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bdd.smoke.test.CucumberTest" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="Rifatras-MacBook-Pro.local" time="0.0">
+  <properties/>
+  <system-out><![CDATA[Feature: Dummy Rest API - Smoke Tests
+
+  @SmokeTest @GET1USER @Success
+  Scenario Outline: Success Scenario - Integration Test for GET End point     ?[90m# DummyAPI.feature:6?[0m
+    ?[36mGiven ?[0m?[36mRest API is up and running?[0m
+    ?[36mWhen ?[0m?[36mI submit a request to Get a single employee data "<Employee number>"?[0m
+    ?[36mThen ?[0m?[36mvalidate "<Response Code>"?[0m
+
+    # And validate response body
+    Examples: 
+Request method:	GET
+Request path:	http://dummy.restapiexample.com/api/v1/employee/100
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Body:			<none>
+
+  @GET1USER @Success @SmokeTest
+  Scenario Outline: Success Scenario - Integration Test for GET End point ?[90m# DummyAPI.feature:13?[0m
+    ?[32mGiven ?[0m?[32mRest API is up and running?[0m                                      ?[90m# StepDefinition.restAPIIsUpAndRunning()?[0m
+    ?[32mWhen ?[0m?[32mI submit a request to Get a single employee data "?[0m?[32m?[1m100?[0m?[32m"?[0m           ?[90m# StepDefinition.iSubmitARequestToGetASingleEmployeeData(String)?[0m
+    ?[31mThen ?[0m?[31mvalidate "?[0m?[31m?[1m200?[0m?[31m"?[0m                                                   ?[90m# StepDefinition.validate(String)?[0m
+      ?[31morg.junit.ComparisonFailure: expected:<[200]> but was:<[429]>
+      	at org.junit.Assert.assertEquals(Assert.java:115)
+      	at org.junit.Assert.assertEquals(Assert.java:144)
+      	at com.bdd.smoke.test.steps.StepDefinition.validate(StepDefinition.java:82)
+      	at ✽.Then validate "200"(DummyAPI.feature:9)
+      ?[0m
+
+  @SmokeTest @DELETE @Success
+  Scenario Outline: Success Scenario - Integration Test for DELETE End point ?[90m# DummyAPI.feature:42?[0m
+    ?[36mGiven ?[0m?[36mRest API is up and running?[0m
+    ?[36mWhen ?[0m?[36mI submit a request to delete a "<user>"?[0m
+    ?[36mThen ?[0m?[36mvalidate "<Response Code>"?[0m
+
+    Examples: 
+Request method:	DELETE
+Request path:	http://dummy.restapiexample.com/api/v1/delete/719
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Headers:		Accept=application/json
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Body:			<none>
+
+  @DELETE @Success @SmokeTest
+  Scenario Outline: Success Scenario - Integration Test for DELETE End point ?[90m# DummyAPI.feature:48?[0m
+    ?[32mGiven ?[0m?[32mRest API is up and running?[0m                                         ?[90m# StepDefinition.restAPIIsUpAndRunning()?[0m
+    ?[32mWhen ?[0m?[32mI submit a request to delete a "?[0m?[32m?[1m719?[0m?[32m"?[0m                                ?[90m# StepDefinition.iSubmitARequestToDeleteA(String)?[0m
+    ?[31mThen ?[0m?[31mvalidate "?[0m?[31m?[1m200?[0m?[31m"?[0m                                                      ?[90m# StepDefinition.validate(String)?[0m
+      ?[31morg.junit.ComparisonFailure: expected:<[200]> but was:<[429]>
+      	at org.junit.Assert.assertEquals(Assert.java:115)
+      	at org.junit.Assert.assertEquals(Assert.java:144)
+      	at com.bdd.smoke.test.steps.StepDefinition.validate(StepDefinition.java:82)
+      	at ✽.Then validate "200"(DummyAPI.feature:45)
+      ?[0m
+
+  @SmokeTest @GetAllUser @Success
+  Scenario Outline: Success Scenario - Integration Test for GET End point ?[90m# DummyAPI.feature:64?[0m
+    ?[36mGiven ?[0m?[36mRest API is up and running?[0m
+    ?[36mWhen ?[0m?[36mI submit a request to Get all employee data endpoint?[0m
+    ?[36mThen ?[0m?[36mvalidate "<Response Code>"?[0m
+
+    # And validate response body
+    Examples: 
+Request method:	GET
+Request path:	http://dummy.restapiexample.com/api/v1/employees
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Headers:		Accept=application/json
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Body:			<none>
+
+  @Success @GetAllUser @SmokeTest
+  Scenario Outline: Success Scenario - Integration Test for GET End point ?[90m# DummyAPI.feature:71?[0m
+    ?[32mGiven ?[0m?[32mRest API is up and running?[0m                                      ?[90m# StepDefinition.restAPIIsUpAndRunning()?[0m
+    ?[32mWhen ?[0m?[32mI submit a request to Get all employee data endpoint?[0m             ?[90m# StepDefinition.iSubmitARequestToGetAllEmployeeDataEndpoint()?[0m
+    ?[31mThen ?[0m?[31mvalidate "?[0m?[31m?[1m200?[0m?[31m"?[0m                                                   ?[90m# StepDefinition.validate(String)?[0m
+      ?[31morg.junit.ComparisonFailure: expected:<[200]> but was:<[429]>
+      	at org.junit.Assert.assertEquals(Assert.java:115)
+      	at org.junit.Assert.assertEquals(Assert.java:144)
+      	at com.bdd.smoke.test.steps.StepDefinition.validate(StepDefinition.java:82)
+      	at ✽.Then validate "200"(DummyAPI.feature:67)
+      ?[0m
+
+?[31mFailed scenarios:?[0m
+?[31mDummyAPI.feature:13 ?[0m# Scenario Outline: Success Scenario - Integration Test for GET End point
+?[31mDummyAPI.feature:48 ?[0m# Scenario Outline: Success Scenario - Integration Test for DELETE End point
+?[31mDummyAPI.feature:71 ?[0m# Scenario Outline: Success Scenario - Integration Test for GET End point
+
+3 Scenarios (?[31m3 failed?[0m)
+9 Steps (?[31m3 failed?[0m, ?[32m6 passed?[0m)
+0m4.365s
+
+org.junit.ComparisonFailure: expected:<[200]> but was:<[429]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.bdd.smoke.test.steps.StepDefinition.validate(StepDefinition.java:82)
+	at ✽.Then validate "200"(DummyAPI.feature:9)
+
+org.junit.ComparisonFailure: expected:<[200]> but was:<[429]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.bdd.smoke.test.steps.StepDefinition.validate(StepDefinition.java:82)
+	at ✽.Then validate "200"(DummyAPI.feature:45)
+
+org.junit.ComparisonFailure: expected:<[200]> but was:<[429]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.bdd.smoke.test.steps.StepDefinition.validate(StepDefinition.java:82)
+	at ✽.Then validate "200"(DummyAPI.feature:67)
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
